@@ -8,7 +8,9 @@ Page({
   },
 
   onLoad: function () {
-    this.$wueComponentIndex = app.wue(this).$wueComponentIndex;
+    let wue = app.wue(this);
+    this.$wueNavigationTab = wue.$wueNavigationTab;
+    this.$wueComponentIndex = wue.$wueComponentIndex;
     console.log('onLoad');
     this.getPageInfo();
   },
@@ -34,6 +36,7 @@ Page({
         that.setData({
           pageInfo: response.data.data
         });
+        that.$wueNavigationTab.show(that.data.pageInfo.navChannel);
         that.$wueComponentIndex.show(that.data.pageInfo.materialList);
       },
       fail: function (error) {

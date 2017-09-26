@@ -1,4 +1,11 @@
 <!--pages/home/home.wxml-->
+<import src="../../wue/component/navigation-tab/tab.wxml" />
 <import src="../../wue/index/index.wxml" />
+
+<!-- <template is="navigation-tab" data="{{...__tab__}}"/>
+<scroll-view class='home-sv' scroll-x="true" scroll-y="true" scroll-left="0" scroll-top="0">
+  <template is="components" data="{{...__component__}}"/>
+</scroll-view>
+-->
 
 <template is="components" data="{{...__component__}}"/>
