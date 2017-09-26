@@ -11,7 +11,8 @@ export default class ComponentIndex extends Component {
   show(data) {
     if (data instanceof Array) {
       let items = [];
-      data.forEach(item => {
+      data.forEach((item, index) => {
+        item['componentIndex'] = index;
         switch (item.materialType) {
           case 0:
             items.push(this.wue.$wueSingleImage.process(item));
