@@ -41,7 +41,24 @@ Page({
       },
       fail: function (error) {
         console.log('error = ' + error);
+      },
+      complete: function(){
+        wx.hideNavigationBarLoading();
+        wx.stopPullDownRefresh();
       }
     });
+  }
+
+  ,
+  onPullDownRefresh: function() {
+    console.log('onPullDownRefresh');
+    wx.showNavigationBarLoading();
+    this.getPageInfo();
+  },
+  onReachBottom: function() {
+    console.log('onReachBottom');
+  },
+  onPageScroll: function() {
+    console.log('onPageScroll');
   }
 })

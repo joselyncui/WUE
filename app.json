@@ -9,5 +9,11 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 5000,
+    "downloadFile": 30000,
+    "uploadFile": 30000,
+    "connectSocket": 30000
   }
 }

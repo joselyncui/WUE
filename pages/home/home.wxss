@@ -1,6 +1,11 @@
 /* pages/home/home.wxss */
 @import "../../wue/index/index.wxss";
 
+.home {
+  height: 100%;
+  display: row;
+} 
+
 .home-sv {
   width: 100%;
   height: 100%;
