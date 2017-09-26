@@ -9,6 +9,7 @@ class MultiImage extends Component {
     //   "__multiImage__.width": "100rpx",
     //   "__multiImage__.height": "100rpx"
     // });
+    this.page.tapComponentMultiImage = this.tapComponentMultiImage;
   }
 
   show(data) {
@@ -35,6 +36,10 @@ class MultiImage extends Component {
       data['height'] = height + 'px';
       return data;
     }
+  }
+
+  tapComponentMultiImage(e) {
+    console.log('[tapComponentMultiImage] index = ' + e.currentTarget.dataset.index);
   }
 }
 

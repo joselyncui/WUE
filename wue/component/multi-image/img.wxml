@@ -6,6 +6,7 @@
        style='width: {{width}}; height: {{height}}' 
        src='{{item.pictureUrl}}' 
        hidden='{{materialType == 3 ? false : true}}'
+       data-index='{{index}}'
        bindtap='tapComponentMultiImage'/>
   </block>
 </view>
