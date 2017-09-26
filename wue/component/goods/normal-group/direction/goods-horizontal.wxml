@@ -1,0 +1,7 @@
+
+<template name="goods-horizontal">
+<view class='goods-horizontal-view' style='width: {{itemWidth}};'>
+  <image src='{{index_image}}' style='width: {{itemWidth}}; height: {{itemWidth}};'/>
+  <text class='goods-horizontal-text' style='width: {{itemWidth}};' decode='true'>{{title}}&nbsp;</text>
+</view>
+</template>

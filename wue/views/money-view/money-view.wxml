@@ -1,0 +1,8 @@
+<!--wue/views/money-view/money-view.wxml-->
+<template name="money-view">
+  <view class='money-view'>
+    <text class="smallSize {{isNormal ? 'normal' : 'unnormal'}}">￥</text>
+    <text class="{{isNormal ? 'smallSize normal' : 'bigSize unnormal'}}">{{prePrice}}</text>
+    <text class="smallSize {{isNormal ? 'normal' : 'unnormal'}}">{{postPrice}}</text>
+  </view>
+</template>

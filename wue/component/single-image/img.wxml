@@ -1,0 +1,8 @@
+<!--wue/component/single-img/img.wxml-->
+<template name="single-image">
+<image class='single-image' 
+       style='height: {{height}}' 
+       src='{{pictureUrl}}' 
+       hidden='{{materialType == 0 ? false : true}}'
+       bindtap='tapComponentSingleImage'/>
+</template>

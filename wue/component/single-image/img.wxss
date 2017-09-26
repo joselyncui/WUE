@@ -1,0 +1,5 @@
+/* wue/component/single-img/img.wxss */
+.single-image {
+  width: 100%;
+  height: 10rpx;
+}

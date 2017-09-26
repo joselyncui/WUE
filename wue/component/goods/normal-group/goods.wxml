@@ -1,0 +1,19 @@
+<!--wue/component/goods/normal-group/goods.wxml-->
+<import src="direction/goods-vertical.wxml" />
+<import src="direction/goods-horizontal.wxml" />
+
+<template name="goods-normal-group">
+  <block wx:if="{{direction == 'horizontal'}}">
+    <scroll-view class='sv-goods-horizontal' scroll-x="true" scroll-left="0">
+      <block wx:for="{{goodsList}}">
+        <template is="goods-{{direction}}" data="{{...item, itemWidth:itemWidth}}" />
+      </block>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <block wx:for="{{goodsList}}">
+      <template is="goods-{{direction}}" data="{{...item}}" />
+      <view style='height:20rpx; background-color:#e3e3e3;'></view>
+    </block>
+  </block>
+</template>

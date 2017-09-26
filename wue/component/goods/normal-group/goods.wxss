@@ -1,0 +1,10 @@
+/* wue/component/goods/normal-group/goods.wxss */
+@import "../../../views/money-view/money-view.wxss";
+@import "./direction/goods-horizontal.wxss";
+@import "./direction/goods-vertical.wxss";
+
+.sv-goods-horizontal {
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+}

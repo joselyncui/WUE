@@ -1,0 +1,36 @@
+
+.goods-vertical-image {
+  width: 100%;
+  height: 194px;
+}
+
+.goods-vertical-title {
+  font-size: 14px;
+  margin: 0 10px 10px 10px;
+}
+
+.goods-vertical-btn-group {
+  float: right;
+  color: white;
+  font-size: 14px;
+}
+
+.goods-vertical-btns-left {
+  display: inline-block;
+  background-color: #434343;
+  padding: 6px 16px;
+  border-radius: 4px 0 0 4px;
+}
+
+.goods-vertical-btns-left-image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 6px;
+  margin-bottom: -3px;
+}
+
+.goods-vertical-btns-right {
+  background-color: #ff534c;
+  padding: 6px 16px;
+  border-radius: 0 4px 4px 0;
+}

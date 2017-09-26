@@ -1,0 +1,10 @@
+<!--banner.wxml-->
+<template name="banner">
+  <swiper class="banner" hidden="{{materialType == 13 ? false : true}}" indicator-dots="true" interval="5000" autoplay="true" circular="true">
+    <block wx:for="{{materialList}}">
+      <swiper-item>
+        <image src="{{item.pictureUrl}}" data-index="{{index}}" bindtap="tapComponentBanner" />
+      </swiper-item>
+    </block>
+  </swiper>
+</template>

@@ -1,0 +1,23 @@
+/* wue/views/money-view/money-view.wxss */
+.money-view {
+  display: inline-block;
+  margin-top: 6rpx;
+  margin-right: 10rpx;
+}
+
+.bigSize {
+  font-size: 40rpx;
+}
+
+.smallSize {
+  font-size: 24rpx;
+}
+
+.unnormal {
+  color: red;
+}
+
+.normal {
+  color: gray;
+  text-decoration: line-through;
+}

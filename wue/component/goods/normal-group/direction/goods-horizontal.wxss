@@ -1,0 +1,19 @@
+
+.goods-horizontal-view {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.goods-horizontal-view image {
+  display: block;
+}
+
+.goods-horizontal-text {
+  display: block;
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

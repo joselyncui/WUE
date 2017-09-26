@@ -1,0 +1,21 @@
+<import src="../../../../views/money-view/money-view.wxml" />
+
+<template name="goods-vertical">
+<view>
+  <image class='goods-vertical-image' src='{{index_image}}'/>
+  <view class='goods-vertical-title'>
+    <text>{{title}}</text>
+  </view>
+  <view class='goods-vertical-title'>
+    <template is="money-view" data="{{...newSalePrice}}"/>
+    <template is="money-view" data="{{...newHighMarketPrice}}"/>
+    <view class='goods-vertical-btn-group'>
+      <view class='goods-vertical-btns-left'>
+        <image class='goods-vertical-btns-left-image' src='../../images/icon_tuan.png'/>
+        <text>{{groupLeastMember}}人团</text>
+      </view>
+      <text class='goods-vertical-btns-right'>去开团 ></text>
+    </view>
+  </view>
+</view>
+</template>

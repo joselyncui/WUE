@@ -1,0 +1,12 @@
+<!--wue/component/multi-image/img.wxml-->
+<template name="multi-image">
+<view>
+  <block wx:for="{{materialList}}">
+    <image class='multi-image' 
+       style='width: {{width}}; height: {{height}}' 
+       src='{{item.pictureUrl}}' 
+       hidden='{{materialType == 3 ? false : true}}'
+       bindtap='tapComponentMultiImage'/>
+  </block>
+</view>
+</template>

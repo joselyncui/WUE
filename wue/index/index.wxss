@@ -1,0 +1,6 @@
+/* wue/index/index.wxss */
+@import "../component/navigation-tab/tab.wxss";
+@import "../component/banner/banner.wxss";
+@import "../component/single-image/img.wxss";
+@import "../component/multi-image/img.wxss";
+@import "../component/goods/normal-group/goods.wxss";
