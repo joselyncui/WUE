@@ -6,21 +6,23 @@
 <import src="../component/goods/normal-group/goods.wxml" />
 
 <template name="components">
-  <block wx:for="{{items}}">
-    <block wx:if="{{item.materialType == 13}}">
-      <template is="banner" data="{{...item}}"/>
-    </block>
+  <block wx:if="{{items != null && items.length > 0}}">
+    <block wx:for="{{items}}">
+      <block wx:if="{{item.materialType == 13}}">
+        <template is="banner" data="{{...item}}"/>
+      </block>
 
-    <block wx:if="{{item.materialType == 0}}">
-      <template is="single-image" data="{{...item}}"/>
-    </block>
+      <block wx:if="{{item.materialType == 0}}">
+        <template is="single-image" data="{{...item}}"/>
+      </block>
 
-    <block wx:if="{{item.materialType == 3}}">
-      <template is="multi-image" data="{{...item}}"/> 
-    </block>
+      <block wx:if="{{item.materialType == 3}}">
+        <template is="multi-image" data="{{...item}}"/> 
+      </block>
 
-    <block wx:if="{{item.materialType == 18 || item.materialType == 15}}">
-      <template is="goods-normal-group" data="{{...item}}" />
+      <block wx:if="{{item.materialType == 18 || item.materialType == 15}}">
+        <template is="goods-normal-group" data="{{...item}}" />
+      </block>
     </block>
   </block>
 </template>
