@@ -1,8 +1,10 @@
 /* navigation-tab.wxss */
 .navigationTab {
+  position: fixed;
   width: 100%;
   box-sizing: border-box;
   white-space: nowrap; 
+  top: 0;
 }
 
 .navigationTabItem {
