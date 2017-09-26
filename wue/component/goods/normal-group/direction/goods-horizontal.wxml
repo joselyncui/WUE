@@ -1,7 +1,9 @@
-
 <template name="goods-horizontal">
-<view class='goods-horizontal-view' style='width: {{itemWidth}};'>
+<view class='goods-horizontal-view' style='width: {{itemWidth}};' data-segue='{{segue}}' bindtap="tapComponentGoodsNormalGroup">
   <image src='{{index_image}}' style='width: {{itemWidth}}; height: {{itemWidth}};'/>
-  <text class='goods-horizontal-text' style='width: {{itemWidth}};' decode='true'>{{title}}&nbsp;</text>
+  <text class='goods-horizontal-title' style='width: {{itemWidth}};' decode='true'>{{title}}&nbsp;</text>
+  <block wx:if="{{sale_price != null}}">
+    <text class='goods-horizontal-price'>￥{{sale_price}}</text>
+  </block>
 </view>
 </template>

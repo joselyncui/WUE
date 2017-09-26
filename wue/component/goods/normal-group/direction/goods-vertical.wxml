@@ -1,7 +1,7 @@
 <import src="../../../../views/money-view/money-view.wxml" />
 
 <template name="goods-vertical">
-<view>
+<view data-segue='{{segue}}' bindtap="tapComponentGoodsNormalGroup">
   <image class='goods-vertical-image' src='{{index_image}}'/>
   <view class='goods-vertical-title'>
     <text>{{title}}</text>

@@ -5,6 +5,7 @@ import MoneyView from '../../../views/money-view/money-view';
 class NormalGroupGoods extends Component {
   constructor(options) {
     super(Object.assign({}, options));
+    this.page.tapComponentGoodsNormalGroup = this.tapComponentGoodsNormalGroup;
   }
 
   show(data) {
@@ -63,6 +64,10 @@ class NormalGroupGoods extends Component {
     data['direction'] = direction;
     data['itemWidth'] = getApp().globalData.systemInfo.screenWidth / data.column + 'px';
     return data;
+  }
+
+  tapComponentGoodsNormalGroup(e) {
+    console.log('segue = ' + JSON.stringify(e.currentTarget.dataset.segue));
   }
 }
 

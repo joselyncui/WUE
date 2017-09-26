@@ -10,10 +10,16 @@
   display: block;
 }
 
-.goods-horizontal-text {
+.goods-horizontal-title {
   display: block;
   font-size: 28rpx;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.goods-horizontal-price {
+  display: block;
+  font-size: 24rpx;
+  color: red;
 }

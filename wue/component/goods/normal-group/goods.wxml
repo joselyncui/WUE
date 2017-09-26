@@ -13,7 +13,7 @@
   <block wx:else>
     <block wx:for="{{goodsList}}">
       <template is="goods-{{direction}}" data="{{...item}}" />
-      <view style='height:20rpx; background-color:#e3e3e3;'></view>
+      <!-- <view style='height:20rpx; background-color:#e3e3e3;'></view> -->
     </block>
   </block>
 </template>
