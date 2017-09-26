@@ -29,12 +29,18 @@ Page({
         "appIdentifier": "com.hs.yjseller",
         "spreadChannel": "app store",
         "BaseAppType": "ios",
-        "page": 1
+        "page": this.customData.page
       },
       method: "POST",
       success: function (response) {
+        let pi = that.data.pageInfo;
+        if (that.customData.page > 1) {
+          pi.materialList.push(...response.data.data.materialList);
+        } else {
+          pi = response.data.data;
+        }
         that.setData({
-          pageInfo: response.data.data
+          pageInfo: pi
         });
         that.$wueNavigationTab.show(that.data.pageInfo.navChannel);
         that.$wueComponentIndex.show(that.data.pageInfo.materialList);
@@ -43,22 +49,28 @@ Page({
         console.log('error = ' + error);
       },
       complete: function(){
+        console.log('complete');
         wx.hideNavigationBarLoading();
         wx.stopPullDownRefresh();
       }
     });
-  }
+  },
 
-  ,
   onPullDownRefresh: function() {
     console.log('onPullDownRefresh');
+    this.customData.page = 1;
     wx.showNavigationBarLoading();
     this.getPageInfo();
   },
+  
   onReachBottom: function() {
-    console.log('onReachBottom');
+    console.log('onReachBottom page = ' + this.customData.page);
+    this.customData.page++;
+    wx.showNavigationBarLoading();
+    this.getPageInfo();
   },
-  onPageScroll: function() {
-    console.log('onPageScroll');
+
+  customData: {
+    page: 1
   }
 })
