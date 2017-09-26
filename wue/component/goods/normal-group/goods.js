@@ -10,7 +10,7 @@ class NormalGroupGoods extends Component {
 
   show(data) {
     let direction = (parseInt(data.column) == data.column ? "vertical" : "horizontal");
-    if (data.materialType == 18 && direction === 'vertical') {
+    if ((data.materialType == 18 || data.materialType == 15) && direction === 'vertical') {
       let list = data.goodsList;
       let mv = new MoneyView(this);
       if (list instanceof Array) {
@@ -40,7 +40,7 @@ class NormalGroupGoods extends Component {
 
   process(data){
     let direction = (parseInt(data.column) == data.column ? "vertical" : "horizontal");
-    if (data.materialType == 18 && direction === 'vertical') {
+    if ((data.materialType == 18 || data.materialType == 15) && direction === 'vertical') {
       let list = data.goodsList;
       let mv = new MoneyView(this);
       if (list instanceof Array) {

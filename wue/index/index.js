@@ -26,6 +26,7 @@ export default class ComponentIndex extends Component {
             items.push(this.wue.$wueBanner.process(item));
             break;
 
+          case 15:
           case 18:
             items.push(this.wue.$wueNormalGroupGoods.process(item));
             break;

@@ -19,7 +19,7 @@
       <template is="multi-image" data="{{...item}}"/> 
     </block>
 
-    <block wx:if="{{item.materialType == 18}}">
+    <block wx:if="{{item.materialType == 18 || item.materialType == 15}}">
       <template is="goods-normal-group" data="{{...item}}" />
     </block>
   </block>

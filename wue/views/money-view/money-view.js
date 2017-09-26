@@ -6,8 +6,6 @@ export default class MoneyView {
     let {price, isNormal} = data;
     if (price != null) {
       let prices = price.split(".");
-      console.log('prices = ' + JSON.stringify(prices));
-
       return {
         "isNormal": isNormal,
         "prePrice": prices[0],
