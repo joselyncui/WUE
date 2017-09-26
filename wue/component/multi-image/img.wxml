@@ -1,7 +1,7 @@
 <!--wue/component/multi-image/img.wxml-->
 <template name="multi-image">
 <view>
-  <block wx:for="{{materialList}}">
+  <block wx:for="{{materialList}}" wx:key="image">
     <image class='multi-image' 
        style='width: {{width}}; height: {{height}}' 
        src='{{item.pictureUrl}}' 

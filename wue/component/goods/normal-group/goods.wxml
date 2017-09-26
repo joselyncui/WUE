@@ -5,13 +5,13 @@
 <template name="goods-normal-group">
   <block wx:if="{{direction == 'horizontal'}}">
     <scroll-view class='sv-goods-horizontal' scroll-x="true" scroll-left="0">
-      <block wx:for="{{goodsList}}">
+      <block wx:for="{{goodsList}}" wx:key="goods">
         <template is="goods-{{direction}}" data="{{...item, itemWidth:itemWidth}}" />
       </block>
     </scroll-view>
   </block>
   <block wx:else>
-    <block wx:for="{{goodsList}}">
+    <block wx:for="{{goodsList}}" wx:key="goods">
       <template is="goods-{{direction}}" data="{{...item}}" />
       <!-- <view style='height:20rpx; background-color:#e3e3e3;'></view> -->
     </block>

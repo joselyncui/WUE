@@ -7,7 +7,7 @@
 
 <template name="components">
   <block wx:if="{{items != null && items.length > 0}}">
-    <block wx:for="{{items}}">
+    <block wx:for="{{items}}" wx:key="componentItem">
       <block wx:if="{{item.materialType == 13}}">
         <template is="banner" data="{{...item}}"/>
       </block>
