@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<import src="../../wue/component/navigation-tab/tab.wxml" />
+<import src="../../wue/component/banner/banner.wxml" />
+<import src="../../wue/component/single-image/img.wxml" />
+<import src="../../wue/component/multi-image/img.wxml" />
+<import src="../../wue/component/goods/normal-group/goods.wxml" />
+
+<template is="navigation-tab" data="{{...__tab__}}"/>
+<template is="banner" data="{{...__banner__}}"/>
+<template is="multi-image" data="{{...__multiImage__}}"/>
+<template is="single-image" data="{{...__singleImage__}}"/>
+<template is="goods-normal-group" data="{{...__normalGroupGoods__}}"/>

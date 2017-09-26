@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<import src="../../wue/index/index.wxml" />
+
+<template is="components" data="{{...__component__}}"/>
