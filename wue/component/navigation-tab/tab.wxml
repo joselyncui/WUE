@@ -1,11 +1,13 @@
 <!--navigation-tab.wxml-->
 <template name="navigation-tab">
   <scroll-view class='navigationTab' scroll-x="true" scroll-left="{{scrollLeft}}">
-    <block wx:for='{{tabItems}}'>
-      <view class="navigationTabItem" style="width:{{itemWidth}}" data-index="{{index}}" bindtap="tapComponentNavigationTab">
-        <text class="title {{curTabIndex == index ? 'active' : ''}}">{{item.title}}</text>
-        <view class="{{curTabIndex == index ? 'bottom-line' : ''}}" />
-      </view>
+    <block wx:if="{{tabItems != null && tabItems.length > 0}}">
+      <block wx:for='{{tabItems}}' wx:key="tabItem">
+        <view class="navigationTabItem" style="width:{{itemWidth}}" data-index="{{index}}" bindtap="tapComponentNavigationTab">
+          <text class="title {{curTabIndex == index ? 'active' : ''}}">{{item.title}}</text>
+          <view class="{{curTabIndex == index ? 'bottom-line' : ''}}" />
+        </view>
+      </block>
     </block>
   </scroll-view>
 </template>
