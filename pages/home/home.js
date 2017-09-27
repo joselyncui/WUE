@@ -4,15 +4,45 @@ var app = getApp();
 Page({
 
   data: {
-    pageInfo: null
+    pageInfo: null,
+    scrollViewHeight: 0
   },
 
   onLoad: function () {
     let wue = app.wue(this);
     this.$wueNavigationTab = wue.$wueNavigationTab;
     this.$wueComponentIndex = wue.$wueComponentIndex;
+    this.$wueTabbar = wue.$wueTabbar;
+
     console.log('onLoad');
+    this.setData({
+      scrollViewHeight: (app.globalData.systemInfo.windowHeight - 32 - 50) + 'px'
+    })
+    this.getTabbar();
     this.getPageInfo();
+  },
+
+  getTabbar: function() {
+    let that = this;
+    wx.request({
+      url: app.getServices('mengdianApp/getMdTabbar'),
+      data: {
+        "_sign_": "CA88EF8B23F3824C1F11EDC80B6497D4",
+        "BaseAppVersion": "4.10.0",
+        "hardware": "iPhone8,2",
+        "SystemVersion": "11.0",
+        "appIdentifier": "com.hs.yjseller",
+        "spreadChannel": "app store",
+        "BaseAppType": "ios"
+      },
+      method: "POST",
+      success: function (response) {
+        that.$wueTabbar.show(response.data.data);
+      },
+      fail: function (error) {
+        console.log('error = ' + error);
+      },
+    })
   },
 
   getPageInfo: function () {
@@ -62,7 +92,7 @@ Page({
     wx.showNavigationBarLoading();
     this.getPageInfo();
   },
-  
+
   onReachBottom: function() {
     console.log('onReachBottom page = ' + this.customData.page);
     this.customData.page++;

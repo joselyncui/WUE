@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "萌店首页"
+  "navigationBarTitleText": "萌店首页",
+  "onReachBottomDistance": 100
 }
