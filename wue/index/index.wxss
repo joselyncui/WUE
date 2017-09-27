@@ -4,3 +4,4 @@
 @import "../component/single-image/img.wxss";
 @import "../component/multi-image/img.wxss";
 @import "../component/goods/normal-group/goods.wxss";
+@import "../component/tabbar/tabbar.wxss";

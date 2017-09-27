@@ -1,0 +1,13 @@
+<!--wue/views/tabbar/tabbar.wxml-->
+<template name="tabbar">
+<view class='tabbar-container'>
+  <block wx:if="{{tabItems != null && tabItems.length > 0}}">
+    <block wx:for="{{tabItems}}" wx:key="tabItem">
+      <view class='tab-item' data-index="{{index}}" bindtap="tapTabbar">
+        <image class='tab-item-image' src='{{curIndex == index ? icon : item.titleIconUrl}}'/>
+        <text class='tab-item-text {{curIndex == index ? "tab-item-text-active" : ""}}'>{{item.title}}</text>
+      </view>
+    </block>
+  </block>
+</view>
+</template>
