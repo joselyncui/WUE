@@ -3,7 +3,7 @@
 <view class='tabbar-container'>
   <block wx:if="{{tabItems != null && tabItems.length > 0}}">
     <block wx:for="{{tabItems}}" wx:key="tabItem">
-      <view class='tab-item' data-index="{{index}}" bindtap="tapTabbar">
+      <view class='tab-item' data-index="{{index}}" bindtap="tapComponentTabbar">
         <image class='tab-item-image' src='{{curIndex == index ? icon : item.titleIconUrl}}'/>
         <text class='tab-item-text {{curIndex == index ? "tab-item-text-active" : ""}}'>{{item.title}}</text>
       </view>
