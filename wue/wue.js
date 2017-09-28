@@ -4,6 +4,7 @@ import SingleImage from './component/single-image/img';
 import MultiImage from './component/multi-image/img';
 import NormalGroupGoods from './component/goods/normal-group/goods';
 import Tabbar from './component/tabbar/tabbar';
+import Bubble from './component/bubble/bubble';
 
 /**
  * 组件集合
@@ -21,7 +22,8 @@ export default function (scope) {
     $wueSingleImage: new SingleImage(scope),
     $wueMultiImage: new MultiImage(scope),
     $wueNormalGroupGoods: new NormalGroupGoods(scope),
-    $wueTabbar: new Tabbar(scope)
+    $wueTabbar: new Tabbar(scope),
+    $wueBubble: new Bubble(scope)
   };
   wue.$wueComponentIndex = new ComponentIndex(scope, wue);
   return wue;

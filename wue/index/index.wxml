@@ -5,6 +5,7 @@
 <import src="../component/multi-image/img.wxml" />
 <import src="../component/goods/normal-group/goods.wxml" />
 <import src="../component/tabbar/tabbar.wxml" />
+<import src="../component/bubble/bubble.wxml" />
 
 <template name="components">
   <block wx:if="{{items != null && items.length > 0}}">

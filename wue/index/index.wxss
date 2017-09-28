@@ -5,3 +5,4 @@
 @import "../component/multi-image/img.wxss";
 @import "../component/goods/normal-group/goods.wxss";
 @import "../component/tabbar/tabbar.wxss";
+@import "../component/bubble/bubble.wxss";

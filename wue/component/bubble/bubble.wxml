@@ -1,0 +1,12 @@
+<!--wue/component/bubble/bubble.wxml-->
+<template name="bubble">
+<block wx:if="{{items != null && items.length > 0}}">
+  <view class='bubble' hidden='{{hidden}}' data-segue="{{items[curIndex].segue}}" bindtap='tapComponentBubble'>
+    <view class='bubble-image-container'>
+      <image class='bubble-image' src='{{items[curIndex].pictureUrl}}'/>
+    </view>
+    <text class='bubble-text'>{{items[curIndex].title}}下单咯</text>
+    <text class='bubble-text-time'>{{items[curIndex].subtitle}}</text>
+  </view>
+</block>
+</template>
