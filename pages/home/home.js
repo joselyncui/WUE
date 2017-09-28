@@ -13,6 +13,7 @@ Page({
     this.$wueNavigationTab = wue.$wueNavigationTab;
     this.$wueComponentIndex = wue.$wueComponentIndex;
     this.$wueTabbar = wue.$wueTabbar;
+    this.$wueBubble = wue.$wueBubble;
 
     console.log('onLoad');
     this.setData({
@@ -20,48 +21,46 @@ Page({
     })
     this.getTabbar();
     this.getPageInfo();
+    this.getBubble();
   },
 
   getTabbar: function() {
     let that = this;
-    wx.request({
-      url: app.getServices('mengdianApp/getMdTabbar'),
+    app.request({
+      url: 'mengdianApp/getMdTabbar',
       data: {
         "_sign_": "CA88EF8B23F3824C1F11EDC80B6497D4",
-        "BaseAppVersion": "4.10.0",
-        "hardware": "iPhone8,2",
-        "SystemVersion": "11.0",
-        "appIdentifier": "com.hs.yjseller",
-        "spreadChannel": "app store",
-        "BaseAppType": "ios"
       },
-      method: "POST",
       success: function (response) {
         that.$wueTabbar.show(response.data.data);
+      }
+    })
+  },
+
+  getBubble: function() {
+    let that = this;
+    app.request({
+      url: 'mengdianApp/getHomeRecommendBubble',
+      data: {
+        "_sign_": "28A97A58184039C5FD7DB3790EA380FF",
+        "timeStamp": "2017-09-27T14:25:06.522Z"
       },
-      fail: function (error) {
-        console.log('error = ' + error);
-      },
+      success: function (response) {
+        that.$wueBubble.show(response.data.data);
+      }
     })
   },
 
   getPageInfo: function () {
     let that = this;
-    wx.request({
-      url: app.getServices('mengdianApp/getPageInfo'),
+    app.request({
+      url: 'mengdianApp/getPageInfo',
       data: {
         "pageSize": 20,
-        "BaseAppVersion": "4.9.0",
         "channel": "AppBuyerHome",
         "_sign_": "95BB77B1CB9A39DBF32AF8EC4C65EFE5",
-        "hardware": "iPhone8,2",
-        "SystemVersion": "10.3.3",
-        "appIdentifier": "com.hs.yjseller",
-        "spreadChannel": "app store",
-        "BaseAppType": "ios",
         "page": this.customData.page
       },
-      method: "POST",
       success: function (response) {
         let pi = that.data.pageInfo;
         if (that.customData.page > 1) {
@@ -75,11 +74,7 @@ Page({
         that.$wueNavigationTab.show(that.data.pageInfo.navChannel);
         that.$wueComponentIndex.show(that.data.pageInfo.materialList);
       },
-      fail: function (error) {
-        console.log('error = ' + error);
-      },
       complete: function(){
-        console.log('complete');
         wx.hideNavigationBarLoading();
         wx.stopPullDownRefresh();
       }

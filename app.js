@@ -1,13 +1,13 @@
 //app.js
 import wue from './wue/wue';
-import getServices from './config/server';
+import request from './config/server';
 
 App({
   // 通用组件
   wue,
 
   // 获取服务真实接口地址
-  getServices,
+  request,
 
   onLaunch: function() {
     this.getSystemInfo();
